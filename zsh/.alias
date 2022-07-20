@@ -1,0 +1,10 @@
+# System aliases
+alias ls=exa
+alias tree="exa --tree"
+
+# zsh aliases
+alias zshrc="cd ~/.dotfiles/zsh"
+
+## Python aliases
+alias python=python3
+alias pip=pip3
