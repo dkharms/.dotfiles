@@ -11,6 +11,7 @@ sudo ln -sf ${ROOT_PATH}/config/starship/starship.toml \
   ${HOME}/.config/starship.toml
 
 # 🔥 alacritty configuration
+mkdir -p ${HOME}/.config/alacritty
 sudo ln -sf ${ROOT_PATH}/config/alacritty/alacritty.yml \
   ${HOME}/.config/alacritty/alacritty.yml
 

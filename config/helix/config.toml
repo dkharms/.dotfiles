@@ -2,38 +2,36 @@ theme = "tokyonight"
 
 [editor]
 line-number = "relative"
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-select = "underline"
+select = "block"
 
 [editor.file-picker]
 hidden = false
 
 [editor.statusline]
-left = ["mode", "separator", "file-name"]
+left = ["mode", "separator", "file-name", "spinner"]
 right = ["diagnostics", "selections", "file-type"]
-separator = "|"
-mode.normal = "🟢 NORMAL"
-mode.insert = "🔴 INSERT"
-mode.select = "🟠 SELECT"
+separator = "∆"
+
+mode.normal = "🌛 NORMAL"
+mode.insert = "🌝 INSERT"
+mode.select = "🌜 SELECT"
 
 [keys.normal]
-# Muscle memory
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
-"%" = "match_brackets"
-V = ["select_mode", "extend_to_line_bounds"]
+"V" = ["select_mode", "extend_to_line_bounds"]
+"g" = { "b" = "jump_backward" }
 
 [keys.insert]
-# Escape the madness! No more fighting with the cursor! Or with multiple cursors!
-esc = ["collapse_selection", "normal_mode"]
-"j" = { k = ["collapse_selection", "normal_mode"] }
+j = { k = "normal_mode" }
 
 [keys.select]
-# Muscle memory
-"{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
-"}" = ["extend_to_line_bounds", "goto_next_paragraph"]
-"%" = "match_brackets"
-"esc" = ["collapse_selection", "normal_mode"]
+"{" = ["goto_prev_paragraph"]
+"}" = ["goto_next_paragraph"]
+k = ["extend_line_up", "extend_to_line_bounds"]
+j = ["extend_line_down", "extend_to_line_bounds"]
