@@ -1,27 +1,31 @@
+ROOT_PATH=$(pwd)
+
 # 🍺 brew configuration
 brew bundle
 
 # 🔥 zsh configuration
-sudo ln -sf .zshrc ~/.zshrc
+sudo ln -sf ${ROOT_PATH}/.zshrc ${HOME}/.zshrc
 
 # 🌟 starship configuration
-sudo ln -sf config/starship/starship.toml ~/.config/starship.toml
+sudo ln -sf ${ROOT_PATH}/config/starship/starship.toml \
+  ${HOME}/.config/starship.toml
 
 # 🔥 alacritty configuration
-sudo ln -sf config/alacritty/alacritty.yaml ~/alacritty.yaml
+sudo ln -sf ${ROOT_PATH}/config/alacritty/alacritty.yml \
+  ${HOME}/.config/alacritty/alacritty.yml
 
 # 🔥 helix configuration
-mkdir -p ~/.config/helix
-sudo ln -sf config/helix/config.toml ~/.config/helix/config.toml
-sudo ln -sf config/helix/languages.toml ~/.config/helix/languages.toml
+mkdir -p ${HOME}/.config/helix
+sudo ln -sf ${ROOT_PATH}/config/helix/config.toml ${HOME}/.config/helix/config.toml
+sudo ln -sf ${ROOT_PATH}/config/helix/languages.toml ${HOME}/.config/helix/languages.toml
 
-mkdir -p ~/.config/helix/themes && cd config/helix/themes
+mkdir -p ${HOME}/.config/helix/themes && cd ${ROOT_PATH}/config/helix/themes
 for filename in ./*.toml; do
   sudo ln -sf ${filename} \
-    ~/.config/helix/themes/${filename}
+    ${HOME}/.config/helix/themes/${filename}
 done
-cd ~/.dotfiles
+cd ${ROOT_PATH}
 
 # 🔥 git configuration
-sudo ln -sf .commitmessage ~/.commitmessage
-sudo ln -sf .gitconfig ~/.gitconfig
+sudo ln -sf ${ROOT_PATH}/.commitmessage ${HOME}/.commitmessage
+sudo ln -sf ${ROOT_PATH}/.gitconfig ${HOME}/.gitconfig
