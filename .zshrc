@@ -1,7 +1,4 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
+# If you come from bash you might have to change your $PATH. # export PATH=$HOME/bin:/usr/local/bin:$PATH  # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -70,7 +67,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ripgrep gitignore golang zsh-autosuggestions kubectl docker brew)
+plugins=(git gitignore golang zsh-autosuggestions docker zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +103,18 @@ eval "$(starship init zsh)"
 
 export PATH="$HOME/go/bin:$PATH"
 export LANG=en_US.UTF-8
+export BAT_THEME="gruvbox-dark"
 
-source "$HOME/.dotfiles/zsh/.alias"
-source "$HOME/.dotfiles/.env"
+export PATH="/Users/dkharms/flutter/bin:$PATH"
+export PATH="/Users/dkharms/.detaspace/bin/space:$PATH"
+
+# System aliases
+alias ls=exa
+alias tree="exa --tree"
+
+## Python aliases
+alias python=python3
+alias pip=pip3
+
+# Cat aliases
+alias cat=bat

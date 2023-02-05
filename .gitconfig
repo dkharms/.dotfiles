@@ -1,0 +1,7 @@
+[commit]
+	template = ~/.commitmessage
+[core]
+	editor = hx
+[user]
+	email = dkharmsd@gmail.com
+	name = Daniel Kharms
