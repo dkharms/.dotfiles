@@ -97,13 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [[ $(uname -p) == "arm" ]]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
-eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(starship init zsh)"
 
 export PATH="$HOME/go/bin:$PATH"
 export LANG=en_US.UTF-8
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="base16"
 
 export PATH="/Users/dkharms/flutter/bin:$PATH"
 export PATH="/Users/dkharms/.detaspace/bin/space:$PATH"
