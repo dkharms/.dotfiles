@@ -110,6 +110,8 @@ export BAT_THEME="base16"
 export PATH="/Users/dkharms/flutter/bin:$PATH"
 export PATH="/Users/dkharms/.detaspace/bin/space:$PATH"
 
+export TERM="xterm-256color"
+
 # System aliases
 alias ls=exa
 alias tree="exa --tree"
