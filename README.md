@@ -11,6 +11,8 @@ Primary Theme – `tokyo-night`;
 
 Package Manager – `brew`;
 
+Terminal – `alacritty`;
+
 Code Editor – `helix`;
 
 ## Get Started
