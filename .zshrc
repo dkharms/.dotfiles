@@ -103,14 +103,11 @@ fi
 
 eval "$(starship init zsh)"
 
-export PATH="$HOME/go/bin:$PATH"
 export LANG=en_US.UTF-8
 export BAT_THEME="ansi"
 
-export PATH="$HOME/flutter/bin:$PATH"
-export PATH="$HOME/.detaspace/bin/space:$PATH"
-
-export TERM="xterm-256color"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="/Users/dkharms/.detaspace/bin/space:$PATH"
 
 # System aliases
 alias ls=exa
