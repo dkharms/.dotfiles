@@ -105,7 +105,7 @@ eval "$(starship init zsh)"
 
 export PATH="$HOME/go/bin:$PATH"
 export LANG=en_US.UTF-8
-export BAT_THEME="base16"
+export BAT_THEME="ansi"
 
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/.detaspace/bin/space:$PATH"
