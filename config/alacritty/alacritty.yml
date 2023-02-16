@@ -8,20 +8,17 @@ window:
     x: 30
     y: 10
 
-# JetBrainsMono Nerd Font
-
-
 font:
   normal:
-    family: Monaco
+    family: JetBrainsMono Nerd Font
     style: Regular
   bold:
-    family: Monaco
+    family: JetBrainsMono Nerd Font
     style: Bold
   italic:
-    family: Monaco
+    family: JetBrainsMono Nerd Font
     style: Italic
-  size: 20
+  size: 22
 
 schemes:
   # Tokyo Night theme, based on both:
