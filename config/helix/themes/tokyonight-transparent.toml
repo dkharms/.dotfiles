@@ -26,7 +26,6 @@
 "diff.delta" = { fg = "orange" }
 "diff.minus" = { fg = "red" }
 
-"ui.background" = { fg = "foreground", bg = "background", modifiers = ["hidden"] }
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "orange", modifiers = ["bold"] }
 "ui.cursor.primary" = { modifiers = ["reversed"] }
@@ -89,6 +88,5 @@ black = "#414868"
 foreground = "#a9b1d6"
 foreground_highlight = "#c0caf5"
 foreground_gutter = "#363b54"
-background = "#ffffffff"
 background_highlight = "#30374b"
 background_menu = "#16161e"
