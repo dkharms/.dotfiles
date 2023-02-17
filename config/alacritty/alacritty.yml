@@ -4,21 +4,22 @@ cursor:
 
 window:
   decorations: "buttonless"
+
   padding:
     x: 30
-    y: 10
+    y: 15
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: FantasqueSansMono Nerd Font
     style: Regular
   bold:
-    family: JetBrainsMono Nerd Font
+    family: FantasqueSansMono Nerd Font
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: FantasqueSansMono Nerd Font
     style: Italic
-  size: 22
+  size: 24
 
 schemes:
   # Tokyo Night theme, based on both:
