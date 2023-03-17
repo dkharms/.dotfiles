@@ -22,9 +22,10 @@ Just run this command in your terminal:
 sh init.sh
 ```
 
-## Get Dump
+## Commands
 
-Just run this command in your terminal:
-```bash
-make brew
+Format python files:
+
+```make
+make format
 ```

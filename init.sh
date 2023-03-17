@@ -1,8 +1,5 @@
 INIT_PATH=$(pwd)
 
-# 🍺 brew configuration
-# brew bundle
-
 # 🔥 zsh configuration
 sudo ln -sf ${INIT_PATH}/.zshrc ${HOME}/.zshrc
 

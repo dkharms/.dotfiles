@@ -1,6 +1,9 @@
+# Common
+export VISUAL="hx"
+
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lambda"
 
 plugins=(git gitignore golang zsh-autosuggestions docker zsh-syntax-highlighting)
 
@@ -8,7 +11,16 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export BAT_THEME="ansi"
-export PATH="$HOME/go/bin:$PATH"
+
+# Custom
+ENV="personal"
+
+if [[ $ENV == "personal" ]]; then
+  export PATH="$HOME/go/bin:$PATH"
+else
+  echo "TODO: ya tool go env GOROOT"
+  echo "TODO: ya tool go env GOPATH"
+fi
 
 # System aliases
 alias ls=exa
@@ -21,9 +33,14 @@ alias pip=pip3
 # Cat aliases
 alias cat=bat
 
-if [[ $(uname -p) == "arm" ]]; then
+if [[ $ENV == "personal" ]]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-eval "$(starship init zsh)"
+if [[ $ENV == "work" ]]; then
+  eval "$(starship init zsh)"
+fi
 
+if [[ $ENV == "work" ]]; then
+  "* * * * * arc rev-parse --is-inside-work-tree > /dev/null 2> /dev/null; if [[ $? = 0 ]] then; arc branch --json | jq '.[] | select(.current == true) | .name' > ~/.arc-branch; fi" | crontab -
+fi

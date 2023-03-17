@@ -10,7 +10,8 @@ normal = "block"
 select = "block"
 
 [editor.file-picker]
-hidden = false
+hidden = true
+git-ignore = false
 
 [editor.statusline]
 left = ["mode", "separator", "file-name", "spinner"]
