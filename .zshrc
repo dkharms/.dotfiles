@@ -3,7 +3,7 @@ export VISUAL="hx"
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="lambda"
+ZSH_THEME="bira"
 
 plugins=(git gitignore golang zsh-autosuggestions docker zsh-syntax-highlighting)
 
@@ -39,8 +39,4 @@ fi
 
 if [[ $ENV == "work" ]]; then
   eval "$(starship init zsh)"
-fi
-
-if [[ $ENV == "work" ]]; then
-  "* * * * * arc rev-parse --is-inside-work-tree > /dev/null 2> /dev/null; if [[ $? = 0 ]] then; arc branch --json | jq '.[] | select(.current == true) | .name' > ~/.arc-branch; fi" | crontab -
 fi
