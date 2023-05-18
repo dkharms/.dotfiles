@@ -4,6 +4,12 @@ theme = "tokyonight-non-italic"
 line-number = "relative"
 true-color = true
 
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-inlay-hints = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"

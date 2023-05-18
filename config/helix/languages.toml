@@ -4,5 +4,6 @@ config = { "build.expandWorkspaceToModule" = false }
 
 [[language]]
 name = "python"
+roots = ["Pipfile"]
 language-server = { command = "pyright-langserver", args = ["--stdio"] }
 config = {}

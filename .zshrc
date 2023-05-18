@@ -13,9 +13,10 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export BAT_THEME="ansi"
 export TERM="xterm-256color"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Custom
-ENV="personal"
+# ENV="work"
 
 if [[ $ENV == "personal" ]]; then
   export PATH="$HOME/go/bin:$PATH"
@@ -54,3 +55,5 @@ function print-colors() {
   printf "|035| \033[35mMagenta \033[m  |045| \033[45mMagenta \033[m  |095| \033[95mLight magenta \033[m  |105| \033[105mLight magenta \033[m\n"
   printf "|036| \033[36mCyan \033[m     |046| \033[46mCyan \033[m     |096| \033[96mLight cyan \033[m     |106| \033[106mLight cyan \033[m\n"
 }
+
+export YANDEX_XML_CONFIG="$HOME/configs/local.cfg.xml"

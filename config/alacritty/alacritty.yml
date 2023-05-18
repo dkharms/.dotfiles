@@ -1,25 +1,25 @@
 cursor:
   style:
-    shape: Beam
+    shape: Block
 
 window:
-  decorations: "buttonless"
+  decorations: "none"
 
   padding:
     x: 30
-    y: 15
+    y: 30
 
 font:
   normal:
-    family: FantasqueSansMono Nerd Font
+    family: Monaco
     style: Regular
   bold:
-    family: FantasqueSansMono Nerd Font
+    family: Monaco
     style: Bold
   italic:
-    family: FantasqueSansMono Nerd Font
+    family: Monaco
     style: Italic
-  size: 24
+  size: 20
 
 schemes:
   # Tokyo Night theme, based on both:
