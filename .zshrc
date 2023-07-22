@@ -16,18 +16,19 @@ export TERM="xterm-256color"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Custom
-# ENV="work"
+ENV=$(eval cat $HOME/.dotenv)
+
+if [[ $ENV == "work" ]]; then
+  eval "arc mount"
+fi
 
 if [[ $ENV == "personal" ]]; then
   export PATH="$HOME/go/bin:$PATH"
 else
+  export PATH="$HOME/arcadia:$PATH"
   export GOROOT=$(ya tool go --print-toolchain-path)
   export PATH=$(ya tool go --print-toolchain-path)/bin:$PATH
   export PATH=$(go env GOPATH)/bin:$PATH
-fi
-
-if [[ $ENV == "work" ]]; then
-  eval "arc mount"
 fi
 
 # System aliases
