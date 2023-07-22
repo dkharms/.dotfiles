@@ -1,7 +1,12 @@
 theme = "tokyonight-non-italic"
 
-[editor]
+[editor] # https://docs.helix-editor.com/configuration.html#editor-section
+scrolloff = 4294967295
+shell = ["zsh", "-c"]
+
 line-number = "relative"
+cursorline = true
+
 true-color = true
 
 [editor.soft-wrap]
@@ -16,12 +21,12 @@ normal = "block"
 select = "block"
 
 [editor.file-picker]
-hidden = true
+hidden = false
 git-ignore = false
 
 [editor.statusline]
-left = ["mode", "separator", "file-name", "spinner"]
-right = ["diagnostics", "selections", "file-type"]
+left = ["mode", "separator", "file-name", "file-modification-indicator", "spinner"]
+right = ["diagnostics", "selections", "position", "file-type"]
 separator = "∆"
 
 mode.normal = "🌛 NORMAL"
@@ -38,7 +43,7 @@ mode.select = "🌜 SELECT"
 j = { k = "normal_mode" }
 
 [keys.select]
-"{" = ["goto_prev_paragraph"]
-"}" = ["goto_next_paragraph"]
+"{" = ["goto_prev_paragraph", "extend_to_line_bounds"]
+"}" = ["goto_next_paragraph", "extend_to_line_bounds"]
 k = ["extend_line_up", "extend_to_line_bounds"]
 j = ["extend_line_down", "extend_to_line_bounds"]

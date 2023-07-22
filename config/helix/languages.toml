@@ -1,5 +1,6 @@
 [[language]]
 name = "go"
+formatter = { command = "goimports", args = [ "--local", "a.yandex-team.ru" ] }
 config = { "build.expandWorkspaceToModule" = false }
 
 [[language]]
