@@ -11,15 +11,15 @@ window:
 
 font:
   normal:
-    family: Monaco
+    family: IntelOne Mono
     style: Regular
   bold:
-    family: Monaco
+    family: IntelOne Mono
     style: Bold
   italic:
-    family: Monaco
+    family: IntelOne Mono
     style: Italic
-  size: 20
+  size: 26
 
 schemes:
   # Tokyo Night theme, based on both:

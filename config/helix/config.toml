@@ -1,7 +1,6 @@
 theme = "tokyonight-non-italic"
 
 [editor] # https://docs.helix-editor.com/configuration.html#editor-section
-scrolloff = 4294967295
 shell = ["zsh", "-c"]
 
 line-number = "relative"

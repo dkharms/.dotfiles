@@ -1,10 +1,11 @@
 [[language]]
 name = "go"
+roots = [ "ya.make", "go.work", "go.mod", ".git" ]
 formatter = { command = "goimports", args = [ "--local", "a.yandex-team.ru" ] }
-config = { "build.expandWorkspaceToModule" = false }
+config = { "build.expandWorkspaceToModule" = false, "ui.Inlayhint.hints" = { assignVariableTypes = true, parameterNames = true, functionTypeParameters = true, constantValues = true }, "ui.Diagnostic.analyses" = { unusedparams = true, deprecated = true} }
 
 [[language]]
 name = "python"
-roots = ["Pipfile"]
+roots = [ "Pipfile" ]
 language-server = { command = "pyright-langserver", args = ["--stdio"] }
 config = {}
