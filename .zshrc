@@ -22,13 +22,17 @@ if [[ $ENV == "work" ]]; then
   eval "arc mount"
 fi
 
-if [[ $ENV == "personal" ]]; then
-  export PATH="$HOME/go/bin:$PATH"
-else
+if [[ $ENV == "work" ]]; then
   export PATH="$HOME/arcadia:$PATH"
+
   export GOROOT=$(ya tool go --print-toolchain-path)
   export PATH=$(ya tool go --print-toolchain-path)/bin:$PATH
   export PATH=$(go env GOPATH)/bin:$PATH
+
+  export YANDEX_XML_CONFIG="$HOME/configs/local.cfg.xml"
+else
+  export PATH="$HOME/go/bin:$PATH"
+  eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 # System aliases
@@ -42,10 +46,6 @@ alias pip=pip3
 # Cat aliases
 alias cat=bat
 
-if [[ $ENV == "personal" ]]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
-
 function print-colors() {
   printf "|039| \033[39mDefault \033[m  |049| \033[49mDefault \033[m  |037| \033[37mLight gray \033[m     |047| \033[47mLight gray \033[m\n"
   printf "|030| \033[30mBlack \033[m    |040| \033[40mBlack \033[m    |090| \033[90mDark gray \033[m      |100| \033[100mDark gray \033[m\n"
@@ -56,5 +56,3 @@ function print-colors() {
   printf "|035| \033[35mMagenta \033[m  |045| \033[45mMagenta \033[m  |095| \033[95mLight magenta \033[m  |105| \033[105mLight magenta \033[m\n"
   printf "|036| \033[36mCyan \033[m     |046| \033[46mCyan \033[m     |096| \033[96mLight cyan \033[m     |106| \033[106mLight cyan \033[m\n"
 }
-
-export YANDEX_XML_CONFIG="$HOME/configs/local.cfg.xml"
