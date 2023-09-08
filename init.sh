@@ -23,6 +23,11 @@ mkdir -p ${HOME}/.config/alacritty
 sudo ln -sf ${INIT_PATH}/config/alacritty/alacritty.yml \
   ${HOME}/.config/alacritty/alacritty.yml
 
+# 🔥 zellij configuration
+mkdir -p ${HOME}/.config/zellij
+sudo ln -sf ${INIT_PATH}/config/zellij/config.kdl \
+  ${HOME}/.config/zellij/config.kdl
+
 # 🔥 helix configuration
 mkdir -p ${HOME}/.config/helix
 sudo ln -sf ${INIT_PATH}/config/helix/config.toml ${HOME}/.config/helix/config.toml
