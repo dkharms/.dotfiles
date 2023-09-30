@@ -14,10 +14,6 @@ done
 # 🔥 zsh configuration
 sudo ln -sf ${INIT_PATH}/.zshrc ${HOME}/.zshrc
 
-# 🌟 starship configuration
-sudo ln -sf ${INIT_PATH}/config/starship/starship.toml \
-  ${HOME}/.config/starship.toml
-
 # 🔥 alacritty configuration
 mkdir -p ${HOME}/.config/alacritty
 sudo ln -sf ${INIT_PATH}/config/alacritty/alacritty.yml \
