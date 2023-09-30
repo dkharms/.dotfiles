@@ -7,17 +7,17 @@ window:
 
   padding:
     x: 30
-    y: 30
+    y: 15
 
 font:
   normal:
-    family: IntelOne Mono
+    family: IntoneMono Nerd Font
     style: Regular
   bold:
-    family: IntelOne Mono
+    family: IntoneMono Nerd Font
     style: Bold
   italic:
-    family: IntelOne Mono
+    family: IntoneMono Nerd Font
     style: Italic
   size: 26
 
