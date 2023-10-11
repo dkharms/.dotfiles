@@ -7,8 +7,8 @@ ZSH_THEME="bira"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,underline"
 
 plugins=(
-  git gitignore golang
-  zsh-autosuggestions docker
+  git gitignore git-open
+  golang zsh-autosuggestions docker
   zsh-syntax-highlighting you-should-use
 )
 
