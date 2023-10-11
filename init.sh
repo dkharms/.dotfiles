@@ -1,16 +1,5 @@
 INIT_PATH=$(pwd)
 
-
-# 🔥 set environment
-while true; do
-    read -p "Which enviroment do you want to setup [personal, work]? " env
-    case $env in
-        "work") echo $env > $HOME/.dotenv; break;;
-        "personal") echo $env > $HOME/.dotenv; break;;
-        * ) echo "Please answer personal or work.";;
-    esac
-done
-
 # 🔥 zsh configuration
 sudo ln -sf ${INIT_PATH}/.zshrc ${HOME}/.zshrc
 
@@ -38,3 +27,4 @@ cd ${INIT_PATH}
 
 # 🔥 git configuration
 sudo ln -sf ${INIT_PATH}/.commitmessage ${HOME}/.commitmessage
+sudo ln -sf ${INIT_PATH}/.gitconfig ${HOME}/.gitconfig

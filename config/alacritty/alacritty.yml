@@ -19,7 +19,7 @@ font:
   italic:
     family: IntoneMono Nerd Font
     style: Italic
-  size: 26
+  size: 18
 
 schemes:
   # Tokyo Night theme, based on both:

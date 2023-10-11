@@ -1,16 +1,9 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Common
 export VISUAL="hx"
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="bira"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,underline"
 
 plugins=(
@@ -25,26 +18,7 @@ export LANG=en_US.UTF-8
 export BAT_THEME="ansi"
 export TERM="xterm-256color"
 export HOMEBREW_NO_AUTO_UPDATE=1
-
-# Custom
-ENV=$(eval cat $HOME/.dotenv)
-
-if [[ $ENV == "work" ]]; then
-  eval "arc mount"
-fi
-
-if [[ $ENV == "work" ]]; then
-  export PATH="$HOME/arcadia:$PATH"
-
-  export GOROOT=$(ya tool go --print-toolchain-path)
-  export PATH=$(ya tool go --print-toolchain-path)/bin:$PATH
-  export PATH=$(go env GOPATH)/bin:$PATH
-
-  export YANDEX_XML_CONFIG="$HOME/configs/local.cfg.xml"
-else
-  export PATH="$HOME/go/bin:$PATH"
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
+export PATH="$HOME/go/bin:$PATH"
 
 # System aliases
 alias ls="eza --icons --hyperlink --group-directories-first"
@@ -68,5 +42,5 @@ function print-colors() {
   printf "|036| \033[36mCyan \033[m     |046| \033[46mCyan \033[m     |096| \033[96mLight cyan \033[m     |106| \033[106mLight cyan \033[m\n"
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(atuin init zsh --disable-up-arrow)"
