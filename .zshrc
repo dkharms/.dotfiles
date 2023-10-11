@@ -21,7 +21,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="$HOME/go/bin:$PATH"
 
 # System aliases
-alias ls="eza --icons --hyperlink --group-directories-first"
+alias ls="eza --icons --group-directories-first"
 alias tree="ls --tree"
 
 ## Python aliases
