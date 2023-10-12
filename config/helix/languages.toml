@@ -1,8 +1,8 @@
 [[language]]
 name = "go"
-roots = [ "ya.make", "go.work", "go.mod", ".git" ]
-formatter = { command = "goimports", args = [ "--local", "a.yandex-team.ru" ] }
-config = { "build.expandWorkspaceToModule" = false, "ui.Inlayhint.hints" = { assignVariableTypes = true, parameterNames = true, functionTypeParameters = true, constantValues = true }, "ui.Diagnostic.analyses" = { unusedparams = true, deprecated = true} }
+roots = [ "go.work", "go.mod", ".git" ]
+formatter = { command = "goimports" }
+config = { "ui.Inlayhint.hints" = { constantValues = true }, "ui.Diagnostic.analyses" = { unusedparams = true, deprecated = true} }
 
 [[language]]
 name = "python"
